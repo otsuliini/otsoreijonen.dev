@@ -1,15 +1,41 @@
 ---
-import Head from "./Head.astro";
+interface Props {
+  title?: string;
+  description?: string;
+}
 
-const { ...props } = Astro.props;
+const { title = "Otso Reijonen", description = "Developer and creator" } = Astro.props;
 ---
+
 <html>
   <head>
-    <meta charset="utf-8">
-    <Head />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
     
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content="Otso Reijonen" />
+    
+    <!-- Web analytics -->
+    <script data-goatcounter="https://my-account.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://otsoreijonen.dev/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#c2410c" />
   </head>
   <body>
-    <!-- Page content goes here -->
+    <slot />
   </body>
 </html>
