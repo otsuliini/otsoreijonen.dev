@@ -1,73 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
 *,
 /* Apply box-sizing to all elements */
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 * {
-
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
 :root {
-    --background-color: #adadad;
-    --text-color: #333333;
-    --font-body: 'Inter', sans-serif;
-    --text-hover-color: #555555;
+  --background-color: #adadad;
+  --text-color: #ffffff;
+  --font-body: "Inter", sans-serif;
+  --text-hover-color: #555555;
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--font-body);
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
+  color: var(--text-color);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
 }
 
-
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
 nav {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    margin-left: 10rem;
-    text-decoration: none;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  margin-left: 10rem;
+  text-decoration: none;
 }
 
 a {
-    background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
-    color: var(--text-color);
-    display: inline-block;
-    padding: 0 .5em 0.2em;
-    text-decoration: none;
-    transition: background-size 0.5s;
+  background: linear-gradient(currentColor 0 0) bottom left/
+    var(--underline-width, 0%) 0.1em no-repeat;
+  color: var(--text-color);
+  display: inline-block;
+  padding: 0 0.5em 0.2em;
+  text-decoration: none;
+  transition: background-size 0.5s;
 }
 
 a:hover {
-    --underline-width: 100%;
+  --underline-width: 100%;
 }
 
 a:hover {
-    display: inline-block;
-    color: var(--text-hover-color);
-    text-decoration-color: var(--text-hover-color);
+  display: inline-block;
+  color: var(--text-hover-color);
+  text-decoration-color: var(--text-hover-color);
 }
-
 
 h1 {
-    color: var(--text-color);
-    text-align: center;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
+  color: var(--text-color);
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
 }
 
 p {
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
-    font-size: 20px;
-
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  font-size: 20px;
 }

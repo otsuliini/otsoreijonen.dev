@@ -1,23 +1,28 @@
-	---
-	import "../styles/global.css";
-	---
+---
+import "../styles/global.css";
+---
 
-	<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Otso Reijonen</title>
-	</head>
-	<body>
-		<nav>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/photos/">Photos</a>
-		</nav>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Otso Reijonen</title>
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/photos/">Photos</a>
+    </nav>
 
-		<h1>Welcome to my portfolio</h1>
-	</body>
-	</html>
+    <h1>Welcome to my portfolio</h1>
+
+    <script>
+      import "../scripts/home-scene.ts";
+    </script>
+  </body>
+</html>
